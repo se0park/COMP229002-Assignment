@@ -1,9 +1,13 @@
 {
-  "name": "wk4",
-  "version": "0.0.0",
+  "name": "comp229-f2020-wk3",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^12.00.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
@@ -16,5 +20,18 @@
     "jquery": "^3.5.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "demo app for COMP229 wk 3",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeyeongPark/COMP229-F2020-WK3.git"
+  },
+  "author": "Seyeong Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeyeongPark/COMP229-F2020-WK3/issues"
+  },
+  "homepage": "https://github.com/SeyeongPark/COMP229-F2020-WK3#readme"
 }
