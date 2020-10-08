@@ -1,6 +1,6 @@
  <!-- Main navigation-->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">COMP229</a>
+    <a class="navbar-brand" href="/"><img src="\Assets\images\logo.png" width="70" height="70" alt="Logo" loading="lazy"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,15 +13,15 @@
           <% } else { %>
             <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="/home"><i class="fas fa-lg fa-house-user"></i>  Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-house-user"></i>  Home </a>
       </li>
 
-      <% if (title == "About") { %>
-        <li class="nav-item active ">   
+      <% if (title == "about") { %>
+        <li class="nav-item active">   
         <% } else { %>
           <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/about"><i class="fas fa-lg fa-search"></i>  About <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/about"><i class="fas fa-lg fa-search"></i>  About </a>
         </li>
 
         <% if (title == "Products") { %>
@@ -29,7 +29,7 @@
           <% } else { %>
             <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="/products"><i class="fas fa-lg fa-th-large"></i>  Products <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/products"><i class="fas fa-lg fa-th-large"></i>  Products </a>
         </li>
 
         <% if (title == "Contact") { %>
@@ -37,7 +37,7 @@
           <% } else { %>
             <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="/contact"><i class="fas fa-lg fa-concierge-bell"></i></i> Contact <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/contact"><i class="fas fa-lg fa-concierge-bell"></i></i> Contact </a>
         </li>
           
           <% if (title == "Services") { %>
@@ -45,7 +45,7 @@
           <% } else { %>
             <li class="nav-item">
           <% } %>
-            <a class="nav-link" href="/services"><i class="fas fa-lg fa-cogs"></i>  Services <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/services"><i class="fas fa-lg fa-cogs"></i>  Services </a>
           </li>   
     </div>
   </nav>
