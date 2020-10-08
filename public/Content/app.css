@@ -1,10 +1,19 @@
 /* custom css gose here */
 
+/* Boxes */
 #portfolio {
     background-color: rgba(255, 255, 255, 0.884);
     border-radius: 0.6em;
     border:2px dashed rgb(199, 196, 196);
     }
+
+#ser_box {
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 0.6em;
+    height: 20em;
+    }   
+
+/* images/Position */
 
 td.aboutinfo { 
         position: relative;
@@ -26,7 +35,8 @@ td.aboutinsta {
         top: -10px;
         width: 500px;
     }   
-    /* fonts */
+
+/* fonts */
 
 h1
 {
@@ -35,21 +45,6 @@ h1
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 
-#top_title
-{
-    color:rgb(2, 5, 10);
-    font-size: 4em;
-    font-family: 'Lobster', cursive;
-    font-weight: 600;
-}
-
-#intro
-{
-    color:rgb(19, 31, 53);
-    text-align:middle;
-    font-size: 500%;
-    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-}
 #mission
 {
     color:rgb(19, 31, 53);
@@ -60,24 +55,74 @@ h1
     font-weight: 300;
 }
 
-#impact
+#about_name
 {
     color:rgb(19, 31, 53);
     text-align:middle;
-    font-size: x-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 27px;
+    font-family: 'BM Dohyeon';
     font-style: italic;
     font-weight: 300;
 }
-span.grayimp
+
+#about_program
+{
+    color:rgb(19, 31, 53);
+    font-size: 18px;
+    font-family: 'BM Dohyeon';
+    font-style: italic;
+    font-weight: 300;
+}
+span.grayabout_
 {
     color:rgb(116, 117, 121);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'BM Dohyeon';
     font-size: x-large;
     font-style: italic;
-
 }
+
+/*  titles */
+
+#ser_title
+{
+    color:rgb(2, 5, 10);
+    font-family: 'BM Dohyeon';
+    font-size: 40px;
+    font-weight: 200;
+}
+
+#top_title
+{
+    color:rgb(2, 5, 10);
+    font-family: 'BM Dohyeon';
+    font-size: 70px;
+    font-weight: 800;
+}
+
+#intro
+{
+    color:rgb(19, 31, 53);
+    text-align:middle;
+    font-size: 500%;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
 
 span.point {
     color: rgb(29, 74, 223);
+}
+
+/* Buttons */
+#submitButton
+{
+    background-color: rgb(82, 105, 182);
+    border: 0;
+    outline: 0;
+}
+
+#resetButton
+{
+    background-color: rgb(136, 136, 136);
+    border: 0;
+    outline: 0;
 }

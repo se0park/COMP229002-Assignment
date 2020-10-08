@@ -1,0 +1,54 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <!-- Main Content -->
+<main class="container">
+  <div class="jumbotron">
+    <center><p id="top_title"> <%= title %> <span class="point"> me</span> </p></center>
+  <hr>
+  <form id="conactForm">
+    <div class="form-group">
+      <label for="firstName">&bull; Name</label>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+<p></p>
+    <div class="form-group">
+      <label for="contactNumber">&bull; Contact Number</label>
+      <input type="tel" class="form-control" id="contactNumber" name="contactNumber" aria-describedby="contactNumber"
+      placeholder="Enter your Contact Number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="emailAddress">&bull; Email address</label>
+      <input type="email" class="form-control" id="emailAddress" name="emailAddress" aria-describedby="emailAddress"
+      placeholder="Enter your Contact Number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="shortMessage">&bull; Message</label>
+      <textarea class="form-control" id="shortMessage"  name="shortMessage" rows="3" aria-describedby="shortMessage"></textarea>
+    </div>
+  <center>
+    <button id="submitButton" type="submit" class="btn btn-primary btn-lg" onclick="location.href='./home'"><i class="fa fa-check-circle"></i>&emsp;Send&emsp;</button>
+    <button id="resetButton" type="reset" class="btn btn-warning btn-lg"><i class="fa fa-trash"></i>&emsp;Reset&emsp;</button>
+  </center>
+  </form>  
+  <br>
+  </div>
+</main>
+
+
+<%- include partials/bottom_nav .ejs %>
+
+
+<%- include partials/footer.ejs %>
+
+
+
