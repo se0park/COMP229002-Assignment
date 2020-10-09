@@ -10,7 +10,7 @@
 #ser_box {
     background-color: rgba(255, 255, 255, 0.493);
     border-radius: 0.6em;
-    height: 20em;
+    height: auto;
     }   
 
 /* images/Position */
@@ -86,7 +86,7 @@ span.grayabout_
 #ser_title
 {
     color:rgb(2, 5, 10);
-    font-family: 'BM Dohyeon';
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 40px;
     font-weight: 200;
 }
@@ -94,7 +94,7 @@ span.grayabout_
 #top_title
 {
     color:rgb(2, 5, 10);
-    font-family: 'BM Dohyeon';
+    font-family: 'Lobster', cursive;
     font-size: 70px;
     font-weight: 800;
 }

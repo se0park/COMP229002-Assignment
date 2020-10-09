@@ -1,5 +1,5 @@
 {
-  "name": "comp229-f2020-wk3",
+  "name": "comp229-assignment1",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -22,17 +22,17 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
-  "description": "demo app for COMP229 wk 3",
+  "description": "demo app for COMP229-Assignment1",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeyeongPark/COMP229-F2020-WK3.git"
+    "url": "git+https://github.com/SeyeongPark/COMP229-Assignment1"
   },
   "author": "Seyeong Park",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SeyeongPark/COMP229-F2020-WK3/issues"
+    "url": "https://github.com/SeyeongPark/COMP229-Assignment1/issues"
   },
-  "homepage": "https://github.com/SeyeongPark/COMP229-F2020-WK3#readme"
+  "homepage": "https://github.com/SeyeongPark/COMP229-Assignment1#readme"
 }
