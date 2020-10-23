@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+// File name : server.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 /**
  * Module dependencies.
  */
@@ -12,7 +17,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3500');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**

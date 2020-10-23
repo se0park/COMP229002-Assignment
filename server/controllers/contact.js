@@ -1,3 +1,8 @@
+// File name : contact.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -16,8 +21,6 @@ module.exports.displayContactList = (req, res, next) => {
         }
         else
         {
-            //console.log(UserList);
-
             res.render('contact/list', 
             {title: 'Contacts', 
             ContactList: contactList, displayName: req.user ? req.user.displayName:''});      
@@ -96,7 +99,6 @@ module.exports.displayEditPage = (req, res, next) => {
         }
     });
 }
-
     module.exports.performDelete = (req, res, next) => {
         let id = req.params.id;
     

@@ -1,13 +1,10 @@
+// File name : contact.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 let mongoose = require('mongoose');
 
-// create a model class
-// let bookModel = mongoose.Schema({
-//     name: String,
-//     author: String,
-//     published: String,
-//     description: String,
-//     price: Number
-// },
 let contactModel = mongoose.Schema({
     username: String,
     contactnumber: String,
@@ -16,10 +13,7 @@ let contactModel = mongoose.Schema({
     password: String
 },
 {
-    // collection: "books"
     collection: "users"
 
 });
-
-// module.exports = mongoose.model('Book', bookModel);
 module.exports = mongoose.model('Contact', contactModel);

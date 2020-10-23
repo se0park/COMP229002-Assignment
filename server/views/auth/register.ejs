@@ -2,17 +2,16 @@
 
 <%- include ../partials/main_nav.ejs %>
 
-<main class="container">
+<main class="container" style="width: 650px;">
     <!-- Message Area-->
     <% if(messages.length>0) { %> 
         <div class="alert alert-danger">
             <%=messages%>
         </div>
     <% } %> 
-    
-    <div class="row">
-        <div class="offset-md-4 col-md-4">
-            <h1>Please Register</h1>
+        <div class="jumbotron">
+          <center><p id="top_title"> <%= title %> <span class="point"> </p></center>
+            <hr>
             <form method="POST" autocomplete="off">
                 <fieldset class="form-group">
                     <label for="username">Username: </label>
@@ -29,25 +28,26 @@
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label for="email">Email: </label>
+                    <label for="email">Email </label>
                     <input type="email" class="form-control"
                     name="email" placeholder="Enter Email Address"
-                    id="email" required autofocus>
-                </fieldset>                  
-                     
-                <fieldset class="form-group">
-                    <label for="homeaddress">Home Address</label>
-                    <input type="text" class="form-control"
-                    name="homeaddress" placeholder="Enter Home Address"
-                    id="homeaddress" >
-                </fieldset>   
-
+                    id="email" required>
+                </fieldset>       
+                
                 <fieldset class="form-group">
                     <label for="contactnumber">Contact Number</label>
                     <input type="tel" class="form-control"
                     name="contactnumber" placeholder="Enter Contact Number"
                     id="contactnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     <small>Format: 123-456-7890</small>
+                </fieldset>   
+                     
+            
+                <fieldset class="form-group">
+                    <label for="homeaddress">Home Address</label>
+                    <input type="text" class="form-control"
+                    name="homeaddress" placeholder="Enter Home Address"
+                    id="homeaddress" >
                 </fieldset>   
                 
                 <fieldset class="form-group">
@@ -58,10 +58,13 @@
                 </fieldset>   
     
                 <fieldset class="form-group text-right">
-                   <input type="submit" class="btn btn-success" value="Register">
-                   <a href="/">
-                    <input type="button" class="btn btn-waring" value="Cancel">
-                </a>
+                    <center>
+                        <button class="btn btn-primary btn-lg" type="submit" style="background-color: rgb(71, 71, 137); border: 0;outline: 0;"> 
+                        <i class="fa fa-check-circle"></i>&emsp; Submit</button>
+                        &emsp;&emsp;
+                        <a href="/contact-list" class="btn btn-warning btn-lg" style="background-color: rgb(138, 138, 150); border: 0;outline: 0;">
+                        <i class="fa fa-trash"></i>&emsp; Cancel</a>
+                    </center>
                 </fieldset>
     
             </form>

@@ -1,3 +1,8 @@
+// File name : index.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 let express = require('express');
 let router = express.Router();
 

@@ -1,3 +1,8 @@
+// File name : app.js
+//  Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 // installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');
@@ -91,7 +96,6 @@ let strategy = new JWTStrategy(jwtOptions, (jwt_payload,done)=>{
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/book-list', booksRouter);
 app.use('/contact-list', contactsRouter);
 
 // catch 404 and forward to error handler

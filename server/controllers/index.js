@@ -1,3 +1,8 @@
+// File name : index.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -84,15 +89,6 @@ module.exports.processLoginPage=(req,res,next)=>{
             const authToken = jwt.sign(payload, DB.Secret, {
                 expiresIn : 604800 // 1 week
             });
-/*  Getting Ready to convert
-            res.json({success: true, msg: 'User Logged in Successfully!', user: {
-                id: user._id,
-                displayName: user.displayName,
-                username: user.username,
-                email: user.email
-            }, token : authToken});
-*/
-            // return res.redirect('/book-list');
             return res.redirect('/contact-list');
         });
     }) (req, res, next); 

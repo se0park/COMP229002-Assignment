@@ -1,13 +1,13 @@
 {
-  "name": "week-4",
-  "version": "0.0.0",
+  "name": "assignment2",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
   },
   "engines": {
-    "node": "^12.8.2",
-    "npm": "^6.14.8"
+    "node": "^12.00.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
@@ -30,7 +30,8 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "express-jwt": "^6.0.0"
   },
   "devDependencies": {
     "@types/connect-flash": "0.0.35",
@@ -38,7 +39,18 @@
     "@types/express-session": "^1.17.0",
     "@types/mongoose": "^5.7.36",
     "@types/passport": "^1.0.4",
-    "@types/passport-local-mongoose": "^4.0.13",
-    "express-jwt": "^6.0.0"
-  }
+    "@types/passport-local-mongoose": "^4.0.13"
+  },
+  "description": "app for assignment2",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeyeongPark/COMP229002-Assignment.git"
+  },
+  "author": "Seyeong Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeyeongPark/COMP229002-Assignment/issues"
+  },
+  "homepage": "https://github.com/SeyeongPark/COMP229002-Assignment#readme"
 }
