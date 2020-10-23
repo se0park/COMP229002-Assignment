@@ -1,4 +1,11 @@
 // IIFE -- Immediately Invoked Function Expression
+
+// File name : app.js
+// Stuent's Name : Seyeong Park
+// Student ID : 301088175
+// Date : October 23th 2020 
+
+
 (function(){
 
     function Start()
