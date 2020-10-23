@@ -1,0 +1,83 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="jumbotron">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <center><p id="top_title"> <%= title %>  <span class="point"> list </span></p></center>
+                <hr>
+            <% if (typeof displayName == 'string' && displayName) {%>
+            <!-- <a href="/book-list/add" class="btn btn-primary" role="button"> -->
+            <a href="/contact-list/add" class="btn btn-primary" role="button">               
+            <!-- <i class="fas fa-plus-circle"></i> Add a Book</a> -->
+            <i class="fas fa-plus-circle"></i> Add a User</a>
+            <p></p>
+            <% } %> 
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    <% if (typeof displayName == 'string' && displayName) {%>
+                        <th class="text-center col-2">User Name</th>
+                        <th class="text-center col-2">Contact Number</th>
+                        <th class="text-center col-4">Email</th>
+                        <th class="col-2">Home Address</th>
+                        <th class="text-center col-2">Password</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    <% } else{ %> 
+                        <th class="text-center col-2">User Name</th>
+                        <th class="text-center col-2">Contact Number</th>
+                        <th class="text-center col-4">Email</th>
+                        <th class="col-2">Home Address</th>
+                        <th class="text-center col-2">Password</th>            
+                    <% } %> 
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < ContactList.length; count++) { %>
+                    <tr class="d-flex">
+                        <% if (typeof displayName == 'string' && displayName) {%>
+                            <td class="text-center col-2"><%= ContactList[count].username %></td>
+                            <td class="text-center col-2"><%= ContactList[count].contactnumber %></td>
+                            <td class="text-center col-4"><%= ContactList[count].email %></td>
+                            <td class="col-2"><%= ContactList[count].homeaddress %></td>
+                            <td class="text-center col-2"><%= ContactList[count].password %></td>
+
+                            <td class="text-center col-1">
+                                <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                    <% } else {%>
+                        <td class="text-center col-2"><%= ContactList[count].username %></td>
+                        <td class="text-center col-2"><%= ContactList[count].contactnumber %></td>
+                        <td class="text-center col-4"><%= ContactList[count].email %></td>
+                        <td class="col-2"><%= ContactList[count].homeaddress %></td>
+                        <td class="text-center col-2"><%= ContactList[count].password %></td>
+                    <% } %> 
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+  </main>
+  
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
+
+
+
+
+

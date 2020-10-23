@@ -12,14 +12,13 @@ let User = mongoose.Schema
             trim: true,
             require: 'username is required'
         },
-    /*password:
-    {
-        type: String,
-        default:'',
-        trim: ture,
-        require: 'password is required'
-    }
-    */
+        password:
+        {
+            type: String,
+            default:'',
+            trim: true,
+            require: 'password is required'
+        },
         email:
         {
             type: String,
@@ -33,6 +32,19 @@ let User = mongoose.Schema
             default:'',
             trim: true,
             require: 'Display Name is required'
+        },
+        homeaddress:
+        {
+            type: String,
+            default:'',
+            trim: true,
+        },
+        contactnumber:
+        {
+            type: String,
+            default:'',
+            trim: true,
+            require: 'Contact number is required'
         },
         created:
         {

@@ -3,6 +3,10 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
+// enable jwt
+let jwt = require('jsonwebtoken');
+let DB = require('../config/db');
+
 // create the USer Model Instance
 let userModel = require('../models/user');
 let User = userModel.User; // alias
@@ -13,19 +17,19 @@ module.exports.displayHomePage = (req, res, next) => {
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About', displayName: req.user ? req.user.displayName:''});
+    res.render('about', { title: 'About', displayName: req.user ? req.user.displayName:''});
 }
 
-module.exports.displayProductsPage = (req, res, next) => {
-    res.render('index', { title: 'Products', displayName: req.user ? req.user.displayName:''});
+module.exports.displayProjectsPage = (req, res, next) => {
+    res.render('projects', { title: 'Projects', displayName: req.user ? req.user.displayName:''});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', { title: 'Services', displayName: req.user ? req.user.displayName:''});
+    res.render('service', { title: 'Services', displayName: req.user ? req.user.displayName:''});
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', { title: 'Contact', displayName: req.user ? req.user.displayName:''});
+    res.render('contact', { title: 'Contact', displayName: req.user ? req.user.displayName:''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -35,7 +39,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         res.render('auth/login', {
             title: "Login",
             messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.displayName : ''
         })
     )
     else{
@@ -54,16 +58,42 @@ module.exports.processLoginPage=(req,res,next)=>{
         // is there a user login error?
         if(!user)
         {
-            req.flash('loginMessage', 'Authentication Error');
+            req.flash('loginMessage', 'Could not find your Account. Please check again or Register new account');
             return res.redirect('/login');            
         }
         req.login(user, (err)=> {
             // server error?
             if(err)
             {
+                // console.log("This is the server error" + err );
                 return next(err);
             }
-            return res.redirect('/book-list');
+
+            const payload = 
+            {
+                id: user._id,
+                displayName: user.displayName,
+                username: user.username,
+                email: user.email,
+                password: user.password,
+                homeaddress: user.homeaddress,
+                contactnumber: user.contactnumber
+
+            }
+            //important thing
+            const authToken = jwt.sign(payload, DB.Secret, {
+                expiresIn : 604800 // 1 week
+            });
+/*  Getting Ready to convert
+            res.json({success: true, msg: 'User Logged in Successfully!', user: {
+                id: user._id,
+                displayName: user.displayName,
+                username: user.username,
+                email: user.email
+            }, token : authToken});
+*/
+            // return res.redirect('/book-list');
+            return res.redirect('/contact-list');
         });
     }) (req, res, next); 
 }
@@ -90,9 +120,11 @@ module.exports.processRegisterPage = (req,res,next)=>{
     // instantiate a user object
     let newUser = new User({
         username : req.body.username,
-        // password: req.boy.password
+        password: req.body.password,
+        homeaddress: req.body.homeaddress,
         email: req.body.email,
-        displayName: req.body.displayName
+        displayName: req.body.displayName,
+        contactnumber: req.body.contactnumber
         });
 
         User.register(newUser, req.body.password, (err)=>{
@@ -118,11 +150,12 @@ module.exports.processRegisterPage = (req,res,next)=>{
 
                 // redirect the user and authenticate them
 
+             //   res.json({success: true, msg: 'User Registered Successfully!'});
                 return passport.authenticate('local')(req, res, ()=>{
-                    res.redirect('/book-list')
+                     res.redirect('/contact-list');
                 });
             }
-        });
+        })
 }
 
 module.exports.performLogout  = (req, res, next) =>

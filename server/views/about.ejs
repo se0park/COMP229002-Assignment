@@ -1,0 +1,56 @@
+<!-- File name : about.ejs
+Stuent's Name : Seyeong Park
+Student ID : 301088175
+Date : October 9th 2020 -->
+
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+  <!-- Main Content -->
+<main class="container">
+  <div class="jumbotron">
+  
+ <center><p id="top_title"> <%= title %> <span class="point"> me</span></p></center>
+ <hr>
+ <div id="portfolio">
+  <table >
+    <tr><!-- start fisrt line -->
+        <td>  
+          <p id="about_name">&emsp;&emsp;Seyeong Park </p>
+          <p id="about_program">&emsp;&emsp;&emsp;Software Enginnering Techonlogy </p>
+          <p> <span class="grayabout_">&emsp;&emsp;Centennial college </span></p>
+        </td>
+        <td class="aboutpicture">
+          <img src="\Assets\images\me_circle.png" width="300" height="300" style="float: right;"> 
+        </td>
+    </tr><!-- end first line -->
+    <tr><!-- start second line -->
+        <td class="aboutinfo" >
+           <table style=padding-left:250;padding-bottom:0>&emsp; I am a software engineering student. I have a goal to create my application in terms of variable topics like
+          Music, Map, Weather, Timer. Also, I love to learn and work with other colleagues. With the programming knowledge such as 
+          Python, C#, Java, JavaScript, and so on that I have learned in Centennial, I hope to handle programs and code skillfully. 
+        </table>
+      </td>
+      <td class="aboutinsta">
+        <p>&emsp;</p>
+        <!-- Resume button image -->
+        <a href="\Assets\Resume.pdf" target="resume">
+          <img src="\Assets\images\resume.png" width="280" height="77" style="float: right;">
+        </a>
+        <!-- instagram sign image -->
+        <a href="https://www.instagram.com/see_yeong">
+          <img src="\Assets\images\instaId.png" width="280" height="77" style="float: right;">
+        </a>
+      </td>
+    </tr><!-- end second line -->
+      </table>
+ <p>&emsp;</p>
+ </div>
+  </div>
+</main>
+
+<%- include partials/bottom_nav .ejs %>
+<%- include partials/footer.ejs %>
+
+
+

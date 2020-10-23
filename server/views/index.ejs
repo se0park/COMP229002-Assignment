@@ -1,21 +1,26 @@
-<%- include partials/header.ejs %>
+<!-- File name : index.ejs
+Stuent's Name : Seyeong Park
+Student ID : 301088175
+Date : October 9th 2020 -->
 
+<%- include partials/header.ejs %>
 <%- include partials/main_nav.ejs %>
-  
 
   <!-- Main Content -->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      
-    </div>
-  </main>
-  
-<%- include partials/bottom_nav.ejs %>  
+<main class="container">
+  <div class="jumbotron">
+  <p id="intro">I<span class="point">'</span>M SEYEONG</p>
 
+  <h1 class="display-4">Welcome to my <span class="point"><%= title %> </span> page</h5>
+  
+  <center><img src="\Assets\images\logo_dark.png" width="300" height="300"></center>
+  <p></p>
+  <center><p id=mission>To do not give up without challenging and achieve the goal with challenging</p></center>
+  
+  </div>
+</main>
+<%- include partials/bottom_nav .ejs %>
 <%- include partials/footer.ejs %>
-  
-
 
 
 

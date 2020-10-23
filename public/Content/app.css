@@ -1,1 +1,121 @@
-/* custom css goes here */
+/* File name : app.css
+Stuent's Name : Seyeong Park
+Student ID : 301088175
+Date : October 9th 2020  */
+
+/* custom css gose here */
+
+/* Boxes */
+#portfolio {
+    background-color: rgba(250, 250, 250, 0.884);
+    border-radius: 0.6em;
+    border:2px dashed rgb(199, 196, 196);
+    }
+#ser_box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.6em;
+    height: auto;
+    }   
+
+/* images/Position */
+td.aboutinfo { 
+        position: relative;
+        left: 50px;
+        top: -50px;
+        width: 420px;
+    }
+td.aboutpicture { 
+        position: relative;
+        left: 0px;
+        top: 10px;
+        width: 500px;
+    }   
+td.aboutinsta { 
+        position: relative;
+        left: -50px;
+        top: -10px;
+        width: 500px;
+    }   
+
+/* fonts */
+h1
+{
+    color:rgb(19, 31, 53);
+    text-align:middle;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+#mission
+{
+    color:rgb(19, 31, 53);
+    text-align:middle;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 300;
+}
+#about_name
+{
+    color:rgb(19, 31, 53);
+    text-align:middle;
+    font-size: 27px;
+    font-family: 'BM Dohyeon';
+    font-style: italic;
+    font-weight: 300;
+}
+#about_program
+{
+    color:rgb(19, 31, 53);
+    font-size: 18px;
+    font-family: 'BM Dohyeon';
+    font-style: italic;
+    font-weight: 300;
+}
+span.grayabout_
+{
+    color:rgb(116, 117, 121);
+    font-family: 'BM Dohyeon';
+    font-size: x-large;
+    font-style: italic;
+}
+
+/*  titles */
+#ser_title
+{
+    color:rgb(2, 5, 10);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+#top_title
+{
+    color:rgb(2, 5, 10);
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+    font-weight: 800;
+}
+#intro
+{
+    color:rgb(19, 31, 53);
+    text-align:middle;
+    font-size: 500%;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+/* point */
+span.point {
+    color: rgb(29, 74, 223);
+}
+
+/* Buttons */
+#submitButton
+{
+    background-color: rgb(82, 105, 182);
+    border: 0;
+    outline: 0;
+}
+#resetButton
+{
+    background-color: rgb(136, 136, 136);
+    border: 0;
+    outline: 0;
+}
