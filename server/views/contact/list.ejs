@@ -11,10 +11,10 @@
             <center><p id="top_title"> <%= title %>  <span class="point"> list </span></p></center>
                 <hr>
             <% if (typeof displayName == 'string' && displayName) {%>
-            <a href="/contact-list/add" class="btn btn-primary" role="button">               
-            <i class="fas fa-plus-circle"></i> Add a User</a>
-            <p></p>
+            <a href="/contact-list/add" class="btn btn-primary btn-lg" role="button" style="background-color: rgb(30, 89, 240); border: 0;outline: 0;">               
+            <i class="fas fa-user-plus"></i></i>  Add a User</a>
             <% } %> 
+            <p></p>
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
@@ -48,12 +48,12 @@
                             <td class="text-center col-2"><%= ContactList[count].password %></td>
 
                             <td class="text-center col-1">
-                                <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                                <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm" style="background-color: rgb(71, 71, 137); border: 0;outline: 0;">
+                                <i class="fas fa-pen"></i> Edit</a>
                             </td>
                             <td class="text-center col-1">
-                                <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Delete</a>
+                                <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm" style="background-color: rgb(181, 53, 53); border: 0;outline: 0;">
+                                <i class="fas fa-user-slash"></i> Delete</a>
                             </td>
                     <% } else {%>
                         <td class="text-center col-2"><%= ContactList[count].username %></td>

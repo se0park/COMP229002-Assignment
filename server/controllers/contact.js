@@ -25,7 +25,7 @@ module.exports.displayContactList = (req, res, next) => {
             {title: 'Contacts', 
             ContactList: contactList, displayName: req.user ? req.user.displayName:''});      
         }
-    });
+    }).sort({'username': 1});
 }
 
 //page we doing
@@ -71,7 +71,7 @@ module.exports.displayEditPage = (req, res, next) => {
             res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit
             , displayName: req.user ? req.user.displayName:''})
         }
-    });
+    }).sort({'username': 1});
 }
 
     module.exports.processEditPage = (req, res, next) => {
