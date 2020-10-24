@@ -14,7 +14,6 @@ let Contact = require('../models/contact');
 
 module.exports.displayContactList = (req, res, next) => {
     Contact.find((err, contactList) => {
-        
         if(err)
         {
             return console.error(err);
@@ -53,7 +52,7 @@ module.exports.processAddPage = (req, res, next) => {
             // refresh the contact list
             res.redirect('/contact-list');
         }
-    });
+    })
 }
 
 module.exports.displayEditPage = (req, res, next) => {
@@ -71,7 +70,7 @@ module.exports.displayEditPage = (req, res, next) => {
             res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit
             , displayName: req.user ? req.user.displayName:''})
         }
-    }).sort({'username': 1});
+    })
 }
 
     module.exports.processEditPage = (req, res, next) => {
@@ -97,7 +96,7 @@ module.exports.displayEditPage = (req, res, next) => {
             // refresh the contact list
             res.redirect('/contact-list');
         }
-    });
+    })
 }
     module.exports.performDelete = (req, res, next) => {
         let id = req.params.id;
@@ -113,5 +112,5 @@ module.exports.displayEditPage = (req, res, next) => {
                  // refresh the contact list
                  res.redirect('/contact-list');
             }
-        });
+        })
 }
